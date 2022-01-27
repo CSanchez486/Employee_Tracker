@@ -5,3 +5,5 @@
 
 
 -- view all employees
+
+-- create sum of sal by dep
