@@ -1,0 +1,53 @@
+Employee Tracker Pseudocode:
+ASSSET: tables w/ schema 
+NEED: mysql2, inquirer, console.table(npm used to print)
+REVIEW: mysql2: .promise()
+HINTS: 
+- sep. file w/ func for SQL queries
+- constructor func or class to organize sql
+- create seeds.sql pre-pop db 
+
+**BONUS** 2 pts each
+- update: employee managers
+- view: mgr to e
+- view: e by dept
+- delete: dept, roles, e
+- view total sal by dept **8 pts** 
+    -sum func; add:totals column & row 
+
+1. start app > can view below:
+- view all: department; roles; employees
+- can add: department, role, employee
+- can update: e.mployee role
+
+---VIEWING----
+2. when:
+- view all dept > show formatted table
+- table: dept names & dept IDs
+
+3. when: 
+- view all roles > table
+- table: job title, role id, dept role belongs to, salary/role
+
+4. when:
+- view all emp > table
+- table: emp data (e, IDs, 1st name, l name, jt, dept, sal, mgrs e reports to)
+
+---ADDING---
+5. when:
+- add dept > p.rompt
+- asked to enter: name of dept & dept   
+
+6.when:
+- add role > p.
+- asked to enter: e. name, sal, dept for role, role
+
+7. when:
+- add e > p.
+- asked to enter: e. 1st name, l name, role, mgr
+
+---UPDATING---
+8. when: 
+- update e > p.
+- select e, select new role 
+
