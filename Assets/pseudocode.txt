@@ -1,5 +1,5 @@
 Employee Tracker Pseudocode:
-ASSSET: tables w/ schema 
+ASSET: tables w/ schema 
 NEED: mysql2, inquirer, console.table(npm used to print)
 REVIEW: mysql2: .promise()
 HINTS: 
@@ -13,7 +13,7 @@ HINTS:
 - view: e by dept
 - delete: dept, roles, e
 - view total sal by dept **8 pts** 
-    -sum func; add:totals column & row 
+    -sum func; add:totals add:column & row (sub-total by dept?)
 
 1. start app > can view below:
 - view all: department; roles; employees

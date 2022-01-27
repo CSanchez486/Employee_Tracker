@@ -1,14 +1,18 @@
 {
-  "name": "note-taker",
-  "version": "1.0.0",
+  "name": "employee_tracker",
+  "lockfileVersion": 2,
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+      "console.table": "^0.10.0",
+      "inquirer": "^8.2.0",
+      "mysql2": "^2.3.3"
+    }
   }
-}
+
+
