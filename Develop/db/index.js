@@ -1,3 +1,5 @@
+const connection = require("../config/connection")
+
 // -- need to view all depts in depts table
 
 
@@ -5,5 +7,6 @@
 
 
 // -- view all employees
+
 
 // -- create sum of sal by dep
