@@ -8,5 +8,8 @@ const connection = require("../config/connection")
 
 // -- view all employees
 
+// join tables
+// create employee
+
 
 // -- create sum of sal by dep
