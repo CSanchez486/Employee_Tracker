@@ -1,11 +1,11 @@
 Employee Tracker Pseudocode:
 ASSET: tables w/ schema 
-NEED: mysql2, inquirer, console.table(npm used to print)
+X   NEED: - mysql2, inquirer, console.table(npm used to print)
 REVIEW: mysql2: .promise()
 HINTS: 
-- sep. file w/ func for SQL queries
+X   - sep. file w/ func for SQL queries
+x   - create seeds.sql pre-pop db 
 - constructor func or class to organize sql
-- create seeds.sql pre-pop db 
 
 **BONUS** 2 pts each
 - update: employee managers
@@ -23,15 +23,21 @@ HINTS:
 ---VIEWING----
 2. when:
 - view all dept > show formatted table
-- table: dept names & dept IDs
+X   - table: dept names & dept IDs
 
 3. when: 
 - view all roles > table
-- table: job title, role id, dept role belongs to, salary/role
+X   - table: job title, role id, dept role belongs to, salary/role
 
 4. when:
 - view all emp > table
-- table: emp data (e, IDs, 1st name, l name, jt, dept, sal, mgrs e reports to)
+X   - table: emp data (e IDs, 1st name, l name, jt, dept, sal, mgrs e reports to)
+
+***link, join tables:
+x_  roles: dept
+x_  e: dept, job_title, salary
+
+
 
 ---ADDING---
 5. when:

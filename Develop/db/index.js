@@ -1,6 +1,12 @@
 const connection = require("../config/connection")
 
 // -- need to view all depts in depts table
+class Database {
+    // 
+    constructor(connection) {
+        this.connection = connection;
+    }
+}
 
 
 // -- view all roles
@@ -8,8 +14,12 @@ const connection = require("../config/connection")
 
 // -- view all employees
 
-// join tables
+// join tables 
 // create employee
 
 
 // -- create sum of sal by dep
+
+
+
+
