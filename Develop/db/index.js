@@ -1,4 +1,4 @@
-const connection = require("../config/connection")
+const connection = require("./connection")
 
 // -- need to view all depts in depts table
 class Database {
@@ -7,7 +7,6 @@ class Database {
         this.connection = connection;
     }
 }
-
 
 // -- view all roles
 
