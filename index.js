@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const db = require('./Develop/db')
+const connection = require('./Develop/db/connection');
 
 // View main menu when app is started
 function mainPrompt() {
