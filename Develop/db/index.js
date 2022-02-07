@@ -1,4 +1,4 @@
-const connection = require("./connection")
+const connection = require('./connection');
 
 // -- need to view all depts in depts table
 class Database {

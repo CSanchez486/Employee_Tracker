@@ -2,14 +2,14 @@
 
 var mysql = require('mysql2');
 
-var con = mysql2.createConnection({
+var connection = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
   database: "e_tracker_db"
 });
 
-con.connect(function(err) {
+connection.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
 });
