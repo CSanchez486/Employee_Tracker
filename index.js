@@ -65,9 +65,39 @@ function mainPrompt() {
 }
 
 // -- add feature for each table:
-// Add to depts
+// Add to departments table
+const addDepartment = () => {
+    inquirer
+    .prompt ([
+        {
+            type: "input",
+            name: "departments",
+            message: "Add the name of new department.",
+            validate(answer) {
+                if (!answer){
+                    return "Department name needs to be defined"
+                }
+                return true
+            }
+        }
+    ])
+    .then((data) => {
+        db.query('INSERT INTO department (name) VALUES (`${data.deptName}`);',
+        function () {
+            console.log('${data.deptName} has been added.');
+            deptArr.push(data.department);
+            mainMenu();
+        });
+    })
+}
+
 
 // add to roles
+const addRole
+
+
+// add to employees
+const addEmployees
 
 
 
