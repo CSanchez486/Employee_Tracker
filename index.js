@@ -24,7 +24,7 @@ function mainPrompt() {
         .then((choices) => {
             switch(choices.mainPrompt){
                 case 'View All Departments':
-                department.runQuery();
+                departments.runQuery();
                 setTimeout(() => {
                     mainMenu();
                     }, 10);
@@ -32,13 +32,27 @@ function mainPrompt() {
                 case 'Add Department':
                     addDepartment();
                     break;
-                case 'View All Roles'
+                case 'View All Roles':
+                roles.runQuery();
+                setTimeout(() => {
+                    mainMenu()
+                    }, 10);
+                case 'Update Role':
+                    updateDepartment();
+                    break;
+                case 'Add Roles':
+                    addRole();
+                    break;
+                case 'View All Employees':
+
+
+                }
 
 
 
             }
         })
-        , 'Update Role', 'Add Department', 'View All Roles', 'Add Roles', 'View All Employees', 'Add Employee', 'Update Employee', 'Delete', 'Staff Annual Budget', 'Exit'
+    
     }
 
 // -- view all roles
