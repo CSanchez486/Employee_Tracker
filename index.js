@@ -37,6 +37,7 @@ function mainPrompt() {
                 setTimeout(() => {
                     mainMenu()
                     }, 10);
+                    break
                 case 'Update Role':
                     updateDepartment();
                     break;
@@ -44,6 +45,21 @@ function mainPrompt() {
                     addRole();
                     break;
                 case 'View All Employees':
+                employees.runQuery();
+                setTimeout(() => {
+                    mainMenu()}, 10);
+                    break;
+                case 'Add Employees':
+                    addEmployees();
+                    break;
+                case 'Update Employee':
+                    updateEmployees();
+                    break;
+                
+
+                
+
+                })
 
 
                 }
