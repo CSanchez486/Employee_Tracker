@@ -1,18 +1,11 @@
 const inquirer = require('inquirer');
-const db = require('./Develop/db/');
-
-// -- need to view all depts in depts  table
-class Database {
-    // 
-    constructor(connection) {
-        this.connection = connection;
-    }
-}
+const db = require('./Develop/db');
 
 
 // View main menu when app is started
 function mainPrompt() {
     inquirer
+        // main menu options that user can select
         .prompt([
         {    
             type: 'list',
@@ -22,8 +15,10 @@ function mainPrompt() {
             }
         ])
         .then((choices) => {
+            // referenced: https://www.w3schools.com/js/js_switch.asp
             switch(choices.mainPrompt){
                 case 'View All Departments':
+                // query database for the departments table 
                 departments.runQuery();
                 setTimeout(() => {
                     mainMenu();
@@ -66,25 +61,22 @@ function mainPrompt() {
                 default:
                     process.exit(0);
             }
-            });
-
-
+        });
 }
 
+// -- add feature for each table:
+// Add to depts
+
+// add to roles
 
 
-            }
-        })
-    
-    }
 
-// -- view all roles
 
 
 // -- view all employees
 
 // join tables 
-// create employee
+
 
 
 // -- create sum of sal by dep
