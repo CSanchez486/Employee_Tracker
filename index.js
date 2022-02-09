@@ -72,7 +72,7 @@ const addDepartment = () => {
         {
             type: "input",
             name: "departments",
-            message: "Add the name of new department.",
+            message: "Add the name of new department",
             validate(answer) {
                 if (!answer){
                     return "Department name needs to be defined"
@@ -82,10 +82,10 @@ const addDepartment = () => {
         }
     ])
     .then((data) => {
-        db.query('INSERT INTO department (name) VALUES (`${data.deptName}`);',
+        db.query('INSERT INTO department (name) VALUES (`${data.departmentName}`);',
         function () {
-            console.log('${data.deptName} has been added.');
-            deptArr.push(data.department);
+            console.log(`${data.departmentName} has been added.`);
+            departmentArr.push(data.department);
             mainMenu();
         });
     })
@@ -93,7 +93,30 @@ const addDepartment = () => {
 
 
 // add to roles
-const addRole
+const addRole = () => {
+    inquirer
+    .prompt ([
+        {
+            type: "input",
+            name: "roles",
+            message: "Add new employee role ",
+            validate(answer) {
+                if(!answer){
+                    return "Employee role needs to be defined"
+                }
+                return true
+            }
+        }
+    ])
+    .then ((data) => {
+        db.query('INSERT INTO roles(name) VALUES (`${data.roles}`);',
+        function() {
+            console.log(`${data.roles} has been added.`);
+            rolesArr.push(data.roles);
+            mainMenu();
+        });
+    })
+}
 
 
 // add to employees
