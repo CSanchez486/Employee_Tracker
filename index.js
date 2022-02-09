@@ -55,14 +55,21 @@ function mainPrompt() {
                 case 'Update Employee':
                     updateEmployees();
                     break;
-                
+                case 'Sort Employees':
+                    sortEmp();
+                    break;
+                case 'Delete':
+                    deleted();
+                case 'View Staff Annual Budget':
+                    budget();
+                    break
+                default:
+                    process.exit(0);
+            }
+            });
 
-                
 
-                })
-
-
-                }
+}
 
 
 
