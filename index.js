@@ -177,8 +177,17 @@ db.query('SELECT firstName, lastName FROM employee',
     return employeesArray;
 })
 
-
 // prompt for updating stored data
+const updateEmployees = () => {
+    inquirer 
+    .prompt([
+    {
+        type: "list",
+        name: "employees",
+        message: "Update - Select Employee:",
+        choices: [employeesArray]
+    },
+])
 
         
     .then((data) => { 
