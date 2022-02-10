@@ -118,9 +118,59 @@ const addRole = () => {
     })
 }
 
-
 // add to employees
-const addEmployees
+const addEmployees = () => {
+    inquirer
+    .prompt([
+        {
+            type: "input",
+            name: "firstName",
+            message: "Employee's First Name:",
+            validate(answer) {
+                if(!answer) {
+                    return "Please enter employee's first name"
+            }
+            return true
+        }
+        },
+        {
+            type: "input",
+            name: "lastName",
+            message: "Employee's last name:",
+            validate(answer) {
+                if (!answer) {
+                    return "Please enter employee's last name"
+            }
+            return true
+        }
+        },
+        {
+            type: "input",
+            name: "job_title",
+            message: "Employee's current role:",
+            validate(answer) {
+                if (!answer) {
+                    return "Please pick employee's current role"
+                }
+                return true
+            }
+        },
+        {
+            type:"input",
+            name: "manager",
+            message: "Manager's Name:",
+            validate (answer) {
+                if (!answer) {
+                    return "Please enter Manager's Name"
+                }
+                return true
+            }
+        },
+        .then 
+
+        
+    ])
+}
 
 
 
