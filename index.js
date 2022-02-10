@@ -167,6 +167,19 @@ const addEmployees = () => {
             }
         },
     ])
+// employees are placed in an array
+const employeesArray = [];
+db.query('SELECT firstName, lastName FROM employee', 
+    function(err, results) {
+    for (const employees of results){
+        employeesArray.push(employees.firstName + " " + employees.lastName);
+    };
+    return employeesArray;
+})
+
+
+// prompt for updating stored data
+
         
     .then((data) => { 
         db.query('INSERT INTO employees(First Name, Last Name, Job Title, Manager) values ( `${data.firstName}`, `${data.lastName}`, `${data.job_title}`, `${data.manager}`);',
