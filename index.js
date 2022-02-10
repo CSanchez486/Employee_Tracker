@@ -166,11 +166,18 @@ const addEmployees = () => {
                 return true
             }
         },
-        .then 
+    ])
+        
+    .then((data) => { 
+        db.query('INSERT INTO employees(First Name, Last Name, Job Title, Manager) values ( `${data.firstName}`, `${data.lastName}`, `${data.job_title}`, `${data.manager}`);',
+        function () {
+        console.log(`${data.firstName} ${data.LastName} has been created`);
+        mainMenu();
+        });
+    })
+}
 
         
-    ])
-}
 
 
 
